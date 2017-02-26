@@ -9,6 +9,22 @@ title: Wenxin Wang's Resume
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 
   {% endfor %}
-  <iframe src="http://docs.google.com/gview?url=https://github.com/WenxinWang/WenxinWang.github.io/blob/master/Resume/Resume_Wenxin%20Wang.pdf"></iframe>  
- 
+  <!-- iframe and google document do not work here.
+  <iframe src="http://docs.google.com/gview?url=https://github.com/WenxinWang/WenxinWang.github.io/blob/master/Resume/Resume_Wenxin%20Wang.pdf"></iframe>  -->
+  <!--Try php to echo each line of the docx.-->
+  <?php
+        $word = new COM("word.application") or die ("Could not initialise MS Word object.");
+        $word->Documents->Open(realpath("/Resume_Wenxin Wang.docx"));
+
+        // Extract content.
+        $content = (string) $word->ActiveDocument->Content;
+
+        echo $content;
+
+        $word->ActiveDocument->Close(false);
+
+        $word->Quit();
+        $word = null;
+        unset($word);   
+?>
 </ul>
