@@ -63,6 +63,10 @@ nav ul li, footer ul li {
 	font-size: 23px;
 }
 
+.container p.bold {
+	font-weight:bold;
+}
+
 .container li {
 	list-style-type: square;
 	font-size: 18px;
