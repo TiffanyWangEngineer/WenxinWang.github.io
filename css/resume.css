@@ -25,7 +25,7 @@ div {
 	float:right;
 	margin-right: 5px;
 	padding-top: 5px;
-	font-size: 20px;
+	font-size: 26px;
 	font-family: Verdana, sans-serif;
 	color: #ffffff;
 }
@@ -42,6 +42,7 @@ h4 {
 	margin-top: -10px;
 	font-family: Garamond, serif;
 	color: #000000;
+	font-size: 20px;
 }
 
 .left p {
@@ -49,13 +50,14 @@ h4 {
 	margin-left: 5px;
 	margin-right: 5px;
 	padding-top: 5px;
-	font-size: 20px;
+	font-size: 26px;
 	font-family: Verdana, sans-serif;
 	color: #ffffff;
 }
 
 li {
 	list-style-type: square;
+	font-size: 20px;
 }
 
 a:hover {
