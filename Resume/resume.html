@@ -1,31 +1,112 @@
----
-layout: default
-title: Wenxin Wang's Resume
----
-<h1>{{ page.title }}</h1>
-<ul class="posts">
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Resume Wenxin Wang</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	<body>
+		<nav>
+    		<ul align="center">
+        		<li><a href="/">Home</a></li>
+			<!--<li><a href="/About/about.html">About</a></li>-->
+        		<li><a href="/Resume/resume2.html">Resume</a></li>
+        		<li><a href="/Portfolio/portfolio.html">Portfolio</a></li>
+			<li><a href="/Volunteer/volunteer.html">Volunteer</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb" align="center">
+        		<h1 >Wenxin Wang Resume</h1>
+		<!---->
+			<h4>Objective</h4>
+			<p>To obtain a full-time job from June 2017.</p>
+			
+			<h4>Education</h4>
+			<p>Master of Science in Software Engineering</p>
+			<ul>
+				<li>Daytona Beach, 2015.8 - 2017.6</li>
+				<li>Embry-Riddle Aeronautical University (ERAU), Daytona Beach, FL 32114</li>
+			</ul>
+			<p>Bachelor Degree in Computer Science and Technology (GPA:3.6)</p>
+			<ul>
+				<li>Nanjing, China, 2012.9 - 2016.6</li>
+				<li>Nanjing University of Aeronautics and Astronautics (NUAA), Nanjing, Jiangsu, China</li>
+			</ul>
+			<h4>Experience</h4>
+			<p>Shenzhen Communication Technology Corp.,Ltd (SCT)		Shenzhen, China 2016.5 –2016.8</p>
+			<p></p>
+			<p>Software Engineer Intern (R&D Center)</p>
+			<ul>
+				<li>Made a Resource Management Online System;</li>
+				<li>Collected and analyzed user requirements;</li>
+				<li>Used MVC architectural pattern;</li>
+				<li>Preliminary design specification and detailed design specification;</li>
+				<li>Set IDE using WAMP;</li>
+				<li>Create websites using CSS/HTML/PHP/mySQL</li>
+				<li>Integrated test;</li>
+				<li>To be familiar with OA System.</li>
+			</ul>
+			
+			<h4>Projects</h4>
+			<p>Web-based Repository Development		Daytona Beach, 2015.8-2015.12</p>
+			
+			<ul>
+				<li>As a manager among five people, developed a Software Project Repository<br> 
+				using Agile project development methodology, HTML, PHP and MySQL (phpMyAdmin)<br> 
+				based on Apache Web server. Realized account management, project storage and<br> 
+				transmission, project search and release. </li>
+			</ul>
+			<p>Robotic Vehicles Communication		Daytona Beach, 2015.8 –2016.5</p>
+			<ul>
+				<li>As a software team member in SIAM (Society for Industrial & Applied Mathematics, ERAU), <br>
+				used MOOS, a cross-platform software for robotics developed by University of Oxford, to study and <br>
+				simulate communication between robotic vehicles on ground station. (http://www.eco-dolphin.org/)</li>
+			</ul>
+			<p>UAV Simulation				Daytona Beach, 2016.1-2016.5</p>
+			<ul>
+				<li>Simulated the UAV flight scene with Google 3D map data by Unity3D. Created the GUI interface<br> 
+				for UAV users to detect and avoid obstacles. (https://www.youtube.com/watch?v=gbA5sJkW_ws)</li>
+			</ul>
+			<h4>Computer Skills</h4>
+			<ul>
+				<li>Programming Languages: C, C++, Java, PHP, SQL, CSS, HTML;</li>
+				<li>Operating Systems: Linux (Ubuntu, helix, Kali), Windows OS, Unix, Dos, Solaris, Apple OSX;</li>
+				<li>Softwares: OpenVPN, Wireshark, MATLAB, Github, Eclipse, autospy, zenmap, VM Virtualbox;</li>
+				<li>Tools: Latex, Dev C++, Unity3D, WAMP, Microsoft Office;</li>
+				<li>Data Technologies: SQL, MySQL, SQL Server, Oracle, phpMyAdmin, Microsoft Access;</li>
+				<li>Process: Personal Software Process (PSP), Team Software Process (TSP), Agile, UML;</li>
+				<li>Cyber Security Technologies: helix +autopsy, sleuthkit, metasploit, meterpreter;</li>
+				<li>Others: Make a bootable USB Ubuntu, Helix, Kali, Solaris.</li>
+			</ul>
+			<h4>Knowledge & Skills</h4>
+			<ul>
+				<li>Software Development Lifecycle</li>
+				<li>Requirements Gathering & Analysis</li>
+				<li>Objected-oriented Programming</li>
+				<li>Technical & End User Documents</li>
+				<li>Software Testing & Troubleshooting</li>
+				<li>Basic Algorithm</li>
+				<li>Website Design & Development</li>
+				<li>Project Teamwork & Communication</li>
+				<li>Security Assessment</li>
+				<li>Penetration and Exploiting Test</li>
+				<li>Digital & Artificial Circuit</li>
+				<li>Principles of Computer Composition</li>
+				<li>Fundamentals of Compiling</li>
+				<li>Principles of assembly</li>
+			</ul>
+		<!---->
+			
+			
 
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-
-  {% endfor %}
-  <!-- iframe and google document do not work here.
-  <iframe src="http://docs.google.com/gview?url=https://github.com/WenxinWang/WenxinWang.github.io/blob/master/Resume/Resume_Wenxin%20Wang.pdf"></iframe>  -->
-  <!--Try php to echo each line of the docx.-->
-  <?php
-        $word = new COM("word.application") or die ("Could not initialise MS Word object.");
-        $word->Documents->Open(realpath("/Resume_Wenxin Wang.docx"));
-
-        // Extract content.
-        $content = (string) $word->ActiveDocument->Content;
-
-        echo $content;
-
-        $word->ActiveDocument->Close(false);
-
-        $word->Quit();
-        $word = null;
-        unset($word);   
-?>
-  <h1>{{ page.title }}</h1>
-</ul>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul align="center">
+        		<li><a href="mailto:Tiffany_Wangs@outlook.com">email</a></li>
+        		<li><a href="https://github.com/WenxinWang">github</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
