@@ -1,7 +1,7 @@
-##HTML
-#Date
+## HTML
+# Date
 Sep 9th, 2017, Sat
-#Contain
+# Contain
 All html files except the index.html.
 1. Eduction.html
 2. Project.html
